@@ -1,9 +1,9 @@
-
+﻿
 <!DOCTYPE html>
 <html lang="en">
 <!-- Head -->
 <head>
-    <title>C-Resume a personal Category Bootstrap responsive Website Template | Home :: w3layouts</title>
+    <title>Software Engineer(Working Over .NET,Angular ,Web Api and Python)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="keywords" content="Sanjeev Saraswat" />
@@ -614,16 +614,16 @@
             <div class="contact-w3ls">
                 <form action="#" method="post">
                     <div class="col-md-7 col-sm-7 contact-left agileits-w3layouts">
-                        <input type="text" name="First Name" placeholder="Name" required="">
-                        <input type="email" class="email" name="Email" placeholder="Email" required="">
-                        <input type="text" name="Number" placeholder="Mobile Number" required="">
+                        <input type="text" name="First Name" id="name" placeholder="Name" required="">
+                        <input type="email" class="email" id="email" name="Email" placeholder="Email" required="">
+                        <input type="text" name="Number" id="number" placeholder="Mobile Number" required="">
                         <!-- <input type="text" class="email" name="Last Name" placeholder="Last Name" required=""> -->
                     </div>
                     <div class="col-md-5 col-sm-5 contact-right agileits-w3layouts">
-                        <textarea name="Message" placeholder="Message" required=""></textarea>
-                        <input type="submit" value="Submit">
+                        <textarea name="Message" placeholder="Message" required="" id="message"></textarea>
+                        <input type="submit" value="Submit" id="btnsubmit">
                     </div>
-                    <div class="clearfix"> </div>
+                    <div class="clearfix"><span id="spnsuccess" style="color:green;display:none;">Thanks for contacting...Soon i will connect with you.</span><span style="display:none;color:red;" id="spnerror">Please fill all required details.</span> </div>
                 </form>
             </div>
 
@@ -688,7 +688,18 @@
 						type: 'fadeIn',
 						iChar: 100,
 						iAnim: 1000
-					});
+                });
+                $('html').click(function () {
+                    $("#spnerror").css("display", "none");
+                    $("#spnsuccess").css("display", "none");
+                });
+                $('#btnsubmit').click(function () {
+                    if ($("#name").val()=="" && $("#email").val()=="" &&$('#number').val()=="" && $("#message").val()=="") {
+                        $("#spnerror").css("display", "block");
+                        return false;
+                    }
+                    $("#spnsuccess").css("display", "block");
+                });
 			});
     </script>
     <!-- //text-effect -->

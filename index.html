@@ -23,7 +23,7 @@
     <!-- //Default-JavaScript-File -->
     <style>
         .errorClass {
-            border: 1px solid red;
+            border: 1px solid red!important;
         }
     </style>
 </head>
@@ -703,12 +703,20 @@
                 });
                 $('#btnsubmit').click(function () {
                     if ($("#name").val()=="" && $("#email").val()=="" &&$('#number').val()=="" && $("#message").val()=="") {
-                        $("#name").addClass("errorClass");
-                        $("#email").addClass("errorClass");
-                        $("#number").addClass("errorClass");
-                        $("#message").addClass("errorClass");
                         $("#spnerror").css("display", "block");
                         return false;
+                    }
+                    if ($("#name").val() == "" ) {
+                        $("#name").addClass("errorClass");
+                    }
+                    if ($("#email").val() == "") {
+                        $("#email").addClass("errorClass");
+                    }
+                    if ($("#number").val() == "") {
+                        $("#number").addClass("errorClass");
+                    }
+                    if ($("#message").val() == "") {
+                        $("#message").addClass("errorClass");
                     }
                     $("#spnsuccess").css("display", "block");
                 });

@@ -21,7 +21,11 @@
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- //Default-JavaScript-File -->
-
+    <style>
+        .errorClass {
+            border: 1px solid red;
+        }
+    </style>
 </head>
 <body>
     <!-- banner -->
@@ -690,11 +694,19 @@
 						iAnim: 1000
                 });
                 $('html').click(function () {
+                    $("#name").removeClass("errorClass");
+                    $("#email").removeClass("errorClass");
+                    $("#number").removeClass("errorClass");
+                    $("#message").removeClass("errorClass");
                     $("#spnerror").css("display", "none");
                     $("#spnsuccess").css("display", "none");
                 });
                 $('#btnsubmit').click(function () {
                     if ($("#name").val()=="" && $("#email").val()=="" &&$('#number').val()=="" && $("#message").val()=="") {
+                        $("#name").addClass("errorClass");
+                        $("#email").addClass("errorClass");
+                        $("#number").addClass("errorClass");
+                        $("#message").addClass("errorClass");
                         $("#spnerror").css("display", "block");
                         return false;
                     }

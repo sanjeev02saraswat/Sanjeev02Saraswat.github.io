@@ -1,15 +1,14 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <!-- Head -->
 <head>
-    <title>Software Engineer(Working Over .NET,Angular ,Web Api and Python)</title>
+    <title>Sanjeev Saraswat-Software Engineer(Working Over .NET,Angular ,Web Api and Python)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="keywords" content="Sanjeev Saraswat" />
     <!-- css -->
     <!-- font-awesome icons -->
-    
+
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <!-- //font-awesome icons -->
     <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -23,7 +22,7 @@
     <!-- //Default-JavaScript-File -->
     <style>
         .errorClass {
-            border: 1px solid red!important;
+            border: 1px solid red !important;
         }
     </style>
 </head>
@@ -603,36 +602,36 @@
 
     <!-- Kick off Filterizr -->
     <script type="text/javascript">
-        $(function() {
+        $(function () {
             //Initialize filterizr with default options
             $('.filtr-container').filterizr();
         });
     </script>
 
     <!-- contact -->
-    <div class="contact" id="contact">
-        <div class="container">
-            <div class="w3ls-heading">
-                <h3>Contact me</h3>
-            </div>
-            <div class="contact-w3ls">
-                <form action="#" method="post">
-                    <div class="col-md-7 col-sm-7 contact-left agileits-w3layouts">
-                        <input type="text" name="First Name" id="name" placeholder="Name" required="">
-                        <input type="email" class="email" id="email" name="Email" placeholder="Email" required="">
-                        <input type="text" name="Number" id="number" placeholder="Mobile Number" required="">
-                        <!-- <input type="text" class="email" name="Last Name" placeholder="Last Name" required=""> -->
-                    </div>
-                    <div class="col-md-5 col-sm-5 contact-right agileits-w3layouts">
-                        <textarea name="Message" placeholder="Message" required="" id="message"></textarea>
-                        <input type="submit" value="Submit" id="btnsubmit">
-                    </div>
-                    <div class="clearfix"><span id="spnsuccess" style="color:green;display:none;">Thanks for contacting...Soon i will connect with you.</span><span style="display:none;color:red;" id="spnerror">Please fill all required details.</span> </div>
-                </form>
-            </div>
-
+    <!--  <div class="contact" id="contact">
+    <div class="container">
+        <div class="w3ls-heading">
+            <h3>Contact me</h3>
         </div>
+        <div class="contact-w3ls">
+            <form action="#" method="post">
+                <div class="col-md-7 col-sm-7 contact-left agileits-w3layouts">
+                    <input type="text" name="First Name" id="name" placeholder="Name" required="">
+                    <input type="email" class="email" id="email" name="Email" placeholder="Email" required="">
+                    <input type="text" name="Number" id="number" placeholder="Mobile Number" required="">
+                    <!-- <input type="text" class="email" name="Last Name" placeholder="Last Name" required="">
     </div>
+    <div class="col-md-5 col-sm-5 contact-right agileits-w3layouts">
+        <textarea name="Message" placeholder="Message" required="" id="message"></textarea>
+        <input type="submit" value="Submit" id="btnsubmit">
+    </div>
+    <div class="clearfix"><span id="spnsuccess" style="color:green;display:none;">Thanks for contacting...Soon i will connect with you.</span><span style="display:none;color:red;" id="spnerror">Please fill all required details.</span> </div>
+    </form>
+    </div>
+
+    </div>
+    </div>-->
     <!-- //contact -->
     <!-- footer -->
     <div class="w3l_footer">
@@ -687,40 +686,43 @@
     <script type="text/javascript" src="js/jquery.transit.js"></script>
     <script type="text/javascript" src="js/jquery.textFx.js"></script>
     <script type="text/javascript">
-			$(document).ready(function() {
-					$('.test').textFx({
-						type: 'fadeIn',
-						iChar: 100,
-						iAnim: 1000
-                });
-                $('html').click(function () {
-                    $("#name").removeClass("errorClass");
-                    $("#email").removeClass("errorClass");
-                    $("#number").removeClass("errorClass");
-                    $("#message").removeClass("errorClass");
-                    $("#spnerror").css("display", "none");
-                    $("#spnsuccess").css("display", "none");
-                });
-                $('#btnsubmit').click(function () {
-                    if ($("#name").val()=="" && $("#email").val()=="" &&$('#number').val()=="" && $("#message").val()=="") {
-                        $("#spnerror").css("display", "block");
-                        return false;
-                    }
-                    if ($("#name").val() == "" ) {
-                        $("#name").addClass("errorClass");
-                    }
-                    if ($("#email").val() == "") {
-                        $("#email").addClass("errorClass");
-                    }
-                    if ($("#number").val() == "") {
-                        $("#number").addClass("errorClass");
-                    }
-                    if ($("#message").val() == "") {
-                        $("#message").addClass("errorClass");
-                    }
+        $(document).ready(function () {
+            $('.test').textFx({
+                type: 'fadeIn',
+                iChar: 100,
+                iAnim: 1000
+            });
+            $('html').click(function () {
+                $("#name").removeClass("errorClass");
+                $("#email").removeClass("errorClass");
+                $("#number").removeClass("errorClass");
+                $("#message").removeClass("errorClass");
+                $("#spnerror").css("display", "none");
+                $("#spnsuccess").css("display", "none");
+            });
+            $('#btnsubmit').click(function () {
+                if ($("#name").val() == "") {
+                    $("#name").addClass("errorClass");
+                }
+                if ($("#email").val() == "") {
+                    $("#email").addClass("errorClass");
+                }
+                if ($("#number").val() == "") {
+                    $("#number").addClass("errorClass");
+                }
+                if ($("#message").val() == "") {
+                    $("#message").addClass("errorClass");
+                }
+                if ($("#name").val() == "" && $("#email").val() == "" && $('#number').val() == "" && $("#message").val() == "") {
+                    $("#spnerror").css("display", "block");
+                    return false;
+                }
+                else {
                     $("#spnsuccess").css("display", "block");
-                });
-			});
+                    return false;
+                }
+            });
+        });
     </script>
     <!-- //text-effect -->
     <!-- menu-js -->
@@ -733,28 +735,28 @@
 
     <script type="text/javascript" src="js/easing.js"></script>
     <script type="text/javascript">
-	jQuery(document).ready(function($) {
-		$(".scroll").click(function(event){
-			event.preventDefault();
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
     </script>
     <!-- start-smoth-scrolling -->
     <script type="text/javascript">
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear'
-				};
-			*/
+        $(document).ready(function () {
+            /*
+                var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+                };
+            */
 
-			$().UItoTop({ easingType: 'easeOutQuart' });
+            $().UItoTop({ easingType: 'easeOutQuart' });
 
-			});
+        });
     </script>
 
 
